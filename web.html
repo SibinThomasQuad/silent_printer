@@ -1,0 +1,81 @@
+<script>
+var htm = `<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+<br>
+</br>
+
+<center>
+<section style="width:2in">
+            <div class="col-sm-12" style="border:1px solid #000; ">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <img style="height:35px;float:left" src="https://kheloindiakhelo.online/assets/ticket/DIMAG LAGA GOAL BANA RECIPT.png" class="img-responsive" draggable="false">
+                        <b style="float:left; font-size: 8px; padding-top: 10px">KHELOINDIAKHELO.ONLINE <br>Dimag Laga Goal Bana</b>
+                        <br>
+                        <br>
+                        <b style="font-size: 10px;">DATE : <span class="date_play">2023-04-17</span> <span class="date_time">12:49:33 PM</span> </b>
+                        <br>
+                        <b style="font-size: 10px;">Dr DATE : <span class="draw_date_play">2023-04-17 01:00:03 PM</span> </b>
+
+                        <br>
+                        <b style="font-size: 10px;">TEAM : <span class="ticket_team_name">A</span> </b>
+                        <br>
+                        <b style="float:left ; font-size: 10px;">GSTN:27AAICC1067E1ZV</b>
+                        <b style="float:left; font-size: 10px;">GOVT OF INDIA</b>
+                        <b><span style="float:left; font-size: 10px;">SKILL GAME <span class="game_name">15 Minutes Game</span></span></b> <br><br>
+                        <b><span style="float:left;font-size: 10px;">AGENT ID:<span class="agent_id">100222</span></span></b>
+                        <br>
+                        <b style="font-size: 10px;"> <br> TOTAL DOTS : <span class="num_points">10</span> </b><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <b style="font-size: 10px;" class="dots_details">M.BAI33 10</b>
+                        <br>
+                        <b style="font-size: 10px;">TOTAL &nbsp;<span class="total_amount">20</span>+GST 28% &nbsp;  </b>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <b style="font-size: 10px; padding-left:10px">HOCKEY GAME PROMOTION</b>
+                        <!--<b style="font-size: 10px; padding-left:10px">FOR AMUSEMENT ONLY</b>-->
+                        <b class="barcode"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAAsAQMAAADYcyHNAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAChJREFUKJFj6N61Y92rvlePdnet63u8al1f97ruXQyjgqOCo4IDLQgA53lbk6cH7qQAAAAASUVORK5CYII=" alt="barcode" class="img-responsive" style="margin-left:auto; margin-right:auto; display:block"></b>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b class="timestamp">2KRFNWNX</b>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <br><br>
+        <section id="myModal_ticket_content">
+
+        </section>
+        </center>`;
+
+function silent_print(html)
+{        
+    const data = '{"html":"'+btoa(html)+'"}';
+
+    const xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.addEventListener("readystatechange", function () {
+    if (this.readyState === this.DONE) {
+        console.log(this.responseText);
+    }
+    });
+
+    xhr.open("POST", "http://127.0.0.1:8000/");
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    xhr.send(data);
+}
+silent_print(htm)
+</script>
